@@ -1,3 +1,9 @@
+
+from scipy.signal import find_peaks
+def rescale(arr, factor=2):
+    n = len(arr)
+    return np.interp(np.linspace(0, n, int(factor*n+1)), np.arange(n), arr)
+
 def heart_rate_equqlization(data_frame,n_signals = 10001,p_threshold = 0.7, rate = 9):
   eq_rate_data = pd.DataFrame()
   for i in range(n_signals):
