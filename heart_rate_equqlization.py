@@ -28,6 +28,7 @@ def heart_rate_equqlization(data_frame,no_samples,n_signals = 10001,threshold = 
   lengthes = []
   eq_rate_data = pd.DataFrame()
   for i in range(n_signals):
+    counter = 0
     p_threshold = threshold
     print("signal number ",i)
     while True:
@@ -43,9 +44,13 @@ def heart_rate_equqlization(data_frame,no_samples,n_signals = 10001,threshold = 
       stop =peaks[int(len(peaks)/2)+1]
       length = stop - start
       if (length > 130):
+        counter +=1
         p_threshold = p_threshold - 0.1
       elif ( length < 50):
+        counter +=1
         p_threshold = p_threshold + 0.1
+      if counter == 3:
+        break
       else:
         break
     lengthes.append(length)
