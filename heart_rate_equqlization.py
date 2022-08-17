@@ -49,10 +49,12 @@ def heart_rate_equqlization(data_frame,no_samples,n_signals = 10001,threshold = 
       elif ( length < 50):
         counter +=1
         p_threshold = p_threshold + 0.1
-      if counter == 3:
-        break
+      
       else:
         break
+      if counter == 3:
+        break
+    print("counter = ",counter)
     lengthes.append(length)
     print("length = ",stop - start)
     np_sig = np_sig[start:stop]
