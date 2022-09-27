@@ -6,4 +6,4 @@ tries to cluster ppg signals<br>
 **peak2peak_aug_2022_oneBeat_kmeans.ipynb**<br> this notebook contain clustering of Peak_to_peak data from Dr mostafa. algorithms used are DTW from tslearn library. for not good clusters there is subclustering and plotting<br>
 **peak2peak_aug_2022_oneBeat_kmeans_1.ipynb**<br> this notebook uses PCA but contains error of shuffling<br>
 **peak2peak_aug_2022_oneBeat_softDTW.ipynb**<br> this notebook uses softDTW to cluster first 50000 of peak2peak datasets but no plots and no blood pressure available because of the memory leakage<br>
-
+**revese_approach.ipynb** this notebook proof that ppg signal shape not depend on blood pressure only but there are another factors such as heart rate
